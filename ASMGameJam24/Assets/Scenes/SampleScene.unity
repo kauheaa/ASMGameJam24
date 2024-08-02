@@ -166,7 +166,7 @@ GameObject:
   - component: {fileID: 540763658}
   - component: {fileID: 540763657}
   - component: {fileID: 540763656}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -471,6 +471,7 @@ GameObject:
   m_Component:
   - component: {fileID: 883223486}
   - component: {fileID: 883223485}
+  - component: {fileID: 883223487}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -523,6 +524,25 @@ Transform:
   - {fileID: 3916688}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &883223487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 883223484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aabe09f2b52a303419f2a73c97b1d6a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 7
+  groundDrag: 5
+  playerHeight: 2
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 0
+  orientation: {fileID: 914997542}
 --- !u!1 &914997541
 GameObject:
   m_ObjectHideFlags: 0

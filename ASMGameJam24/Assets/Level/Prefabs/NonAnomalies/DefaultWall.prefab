@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5694997074206642186}
   - component: {fileID: 6120413036987769035}
   - component: {fileID: 6799342569824185419}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: TextureHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -115,7 +115,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3153647541282889363}
-  m_Layer: 0
+  - component: {fileID: 1763258943522434083}
+  - component: {fileID: 329441510425256072}
+  m_Layer: 15
   m_Name: DefaultWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -138,3 +140,37 @@ Transform:
   - {fileID: 7623255346625311285}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1763258943522434083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4132287412881351316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd1c89fdd1aa55c43ae3daa913f624ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectType: nonanomaly
+--- !u!65 &329441510425256072
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4132287412881351316}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 13.44, y: 5.3, z: 1}
+  m_Center: {x: 0, y: 2.42, z: 0}

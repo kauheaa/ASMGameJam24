@@ -7,6 +7,8 @@ public class Interactor : MonoBehaviour
 
 	[SerializeField] private LayerMask interactableLayer; // Reference to the layer mask
 
+	[SerializeField] private TaskManager taskManager; // Reference to the TaskManager script
+
 
 	void Update()
 	{
@@ -64,5 +66,15 @@ public class Interactor : MonoBehaviour
 	private void HandleType2()
 	{
 		Debug.Log("Clicked Non-Anomaly");
+
+		// Call the NextTask method on the TaskManager
+		if (taskManager != null)
+		{
+			taskManager.NextTask();
+		}
+		else
+		{
+			Debug.LogWarning("TaskManager reference is missing.");
+		}
 	}
 }

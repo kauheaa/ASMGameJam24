@@ -4,9 +4,12 @@ using UnityEngine.SceneManagement;
 public class SpawnManager : MonoBehaviour
 {
 	public SpawnerPoint[] spawnerPoints; // Array of spawner points
+	public int anomaliesDetected = 0;
 
 	private void Start()
 	{
+		anomaliesDetected = 0;
+
 		if (spawnerPoints.Length == 0)
 		{
 			Debug.LogError("No spawner points assigned.");
@@ -21,12 +24,14 @@ public class SpawnManager : MonoBehaviour
 			if (i == specialSpawnerIndex)
 			{
 				spawnerPoints[i].SpawnSpecial();
+				Debug.Log("spawn manager found " + anomaliesDetected + " anomalies");
 			}
 			else
 			{
 				spawnerPoints[i].SpawnDefault();
 			}
 		}
+		Debug.Log("anomalies detected: " + anomaliesDetected);
 
 	}
 

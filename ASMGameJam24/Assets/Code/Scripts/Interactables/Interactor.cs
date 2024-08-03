@@ -1,4 +1,6 @@
+using TMPro;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class Interactor : MonoBehaviour
 {
@@ -64,6 +66,7 @@ public class Interactor : MonoBehaviour
 	{
 		Debug.Log("Clicked Anomaly");
 		taskManager.anomaliesClicked++;
+		taskManager.Dialogue();
 		taskManager.EndGame();
 		Debug.Log("taskManager got anomalies clicked " + taskManager.anomaliesClicked);
 	}

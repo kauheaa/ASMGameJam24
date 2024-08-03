@@ -15,6 +15,28 @@ public class TaskManager : MonoBehaviour
 	private int currentTaskIndex = 0; // Index to keep track of the current task
 	private int tasksCompleted = 0; // Counter to track completed tasks
 
+	[SerializeField] private GameObject uiPanel;
+	[SerializeField] private TextMeshProUGUI dialogue;
+
+
+	// Method to update the text displayed
+	public void UpdateText(string newText)
+	{
+		if (dialogue != null)
+		{
+			dialogue.text = newText;
+		}
+		else
+		{
+			Debug.LogWarning("TextMeshProUGUI reference is missing.");
+		}
+	}
+
+	public void Dialogue()
+	{
+		UpdateText("Huh, I guess I'm not awake yet after all...");
+	}
+
 	void Start()
 	{
 
@@ -26,6 +48,7 @@ public class TaskManager : MonoBehaviour
 		{
 			UpdateTaskDisplay();
 		}
+		UpdateText("");
 	}
 
 	// Method to update the task display

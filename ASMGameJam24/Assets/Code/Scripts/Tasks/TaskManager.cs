@@ -8,12 +8,19 @@ public class TaskManager : MonoBehaviour
 	[SerializeField] private string[] tasks; // Array of task strings
 	[SerializeField] private GameObject[] taskObjects; // Array of task objects
 	[SerializeField] private Animator uiAnimator; // Reference to the UI Animator component
+	public SpawnManager spawnManager;
+	public int anomaliesDetected = 0;
+	public int anomaliesClicked = 0;
 
 	private int currentTaskIndex = 0; // Index to keep track of the current task
 	private int tasksCompleted = 0; // Counter to track completed tasks
 
 	void Start()
 	{
+
+		anomaliesDetected = spawnManager.anomaliesDetected;
+		Debug.Log("TaskManager got " + anomaliesDetected + " anomalies");
+
 		// Initialize the task display
 		if (tasks.Length > 0)
 		{
@@ -46,7 +53,6 @@ public class TaskManager : MonoBehaviour
 			}
 			else
 			{
-				// Trigger the end game UI or transition to another scene
 				EndGame();
 			}
 
@@ -66,9 +72,24 @@ public class TaskManager : MonoBehaviour
 	}
 
 	// Method to handle the end of the game
-	private void EndGame()
+	public void EndGame()
 	{
-		Debug.Log("All tasks completed! Ending the game...");
+		Debug.Log("Reloading scene...");
+		if (anomaliesDetected != 0)
+		{
+			if (anomaliesClicked != 0)
+			{
+				ScoreManager.Instance.AddScore(5);
+			}
+			else
+			{
+				ScoreManager.Instance.ResetScore();
+			}
+		}
+		else
+		{
+			ScoreManager.Instance.AddScore(1);
+		}
 
 		// Play the animation
 		if (uiAnimator != null)

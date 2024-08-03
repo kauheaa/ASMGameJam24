@@ -63,7 +63,9 @@ public class Interactor : MonoBehaviour
 	private void HandleType1(IInteractable interactable)
 	{
 		Debug.Log("Clicked Anomaly");
-		// Handle type 1 interactions
+		taskManager.anomaliesClicked++;
+		taskManager.EndGame();
+		Debug.Log("taskManager got anomalies clicked " + taskManager.anomaliesClicked);
 	}
 
 	private void HandleType2(IInteractable interactable)

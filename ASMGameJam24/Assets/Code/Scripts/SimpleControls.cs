@@ -1,0 +1,29 @@
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class SimpleControls : MonoBehaviour
+{
+	[SerializeField] public ScoreManager scoreManager;
+	void Update()
+	{
+		// Check if the "Esc" key is pressed
+		if (Input.GetKeyDown(KeyCode.Escape))
+		{
+			// Close the game
+			Application.Quit();
+			// If running in the editor, stop playing the scene
+#if UNITY_EDITOR
+			UnityEditor.EditorApplication.isPlaying = false;
+#endif
+		}
+
+		// Check if the "R" key is pressed
+		if (Input.GetKeyDown(KeyCode.R))
+		{
+
+			scoreManager.ResetScore();
+			// Load the scene called "Level"
+			SceneManager.LoadScene("Level");
+		}
+	}
+}

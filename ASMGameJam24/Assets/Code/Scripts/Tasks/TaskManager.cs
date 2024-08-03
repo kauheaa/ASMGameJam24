@@ -102,7 +102,7 @@ public class TaskManager : MonoBehaviour
 		{
 			if (anomaliesClicked != 0)
 			{
-				ScoreManager.Instance.AddScore(5);
+				ScoreManager.Instance.AddScore(1);
 			}
 			else
 			{
@@ -123,6 +123,11 @@ public class TaskManager : MonoBehaviour
 		{
 			Debug.LogWarning("UI Animator is not assigned.");
 		}
+	}
+
+	public void ChangeScene(string sceneName)
+	{
+		SceneManager.LoadScene(sceneName);
 	}
 
 	// Method to reload the scene

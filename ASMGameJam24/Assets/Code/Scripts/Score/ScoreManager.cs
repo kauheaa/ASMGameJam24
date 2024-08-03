@@ -9,6 +9,11 @@ public class ScoreManager : MonoBehaviour
 
 	public TextMeshProUGUI scoreText;
 
+	private void Start()
+	{
+		score = 0;
+	}
+
 	private void Awake()
 	{
 		if (Instance == null)

@@ -1,14 +1,13 @@
+using TMPro;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class Interactor : MonoBehaviour
 {
 	[SerializeField] private string type1; // Define the first type
 	[SerializeField] private string type2; // Define the second type
-
 	[SerializeField] private LayerMask interactableLayer; // Reference to the layer mask
-
 	[SerializeField] private TaskManager taskManager; // Reference to the TaskManager script
-
 
 	void Update()
 	{
@@ -26,20 +25,25 @@ public class Interactor : MonoBehaviour
 			RaycastHit hit;
 			if (Physics.Raycast(ray, out hit, Mathf.Infinity, interactableLayer))
 			{
+				// Get the hit object's parent if it has one
+				Transform hitTransform = hit.collider.transform;
+				if (hitTransform.parent != null)
+				{
+					hitTransform = hitTransform.parent;
+				}
 
-				IInteractable interactable = hit.collider.GetComponent<IInteractable>();
+				IInteractable interactable = hitTransform.GetComponent<IInteractable>();
 
 				if (interactable != null)
 				{
-
 					// Check for each type and call the corresponding function
 					switch (interactable.ObjectType)
 					{
 						case var t when t == type1:
-							HandleType1();
+							HandleType1(interactable);
 							break;
 						case var t when t == type2:
-							HandleType2();
+							HandleType2(interactable);
 							break;
 						default:
 							Debug.Log("Unknown type");
@@ -58,19 +62,35 @@ public class Interactor : MonoBehaviour
 		}
 	}
 
-	private void HandleType1()
+	private void HandleType1(IInteractable interactable)
 	{
 		Debug.Log("Clicked Anomaly");
+		taskManager.anomaliesClicked++;
+		taskManager.Dialogue();
+		taskManager.EndGame();
+		Debug.Log("taskManager got anomalies clicked " + taskManager.anomaliesClicked);
 	}
 
-	private void HandleType2()
+	private void HandleType2(IInteractable interactable)
 	{
 		Debug.Log("Clicked Non-Anomaly");
 
-		// Call the NextTask method on the TaskManager
+		// Call the NextTask method on the TaskManager if the clicked object is the current task object
 		if (taskManager != null)
 		{
-			taskManager.NextTask();
+			MonoBehaviour monoInteractable = interactable as MonoBehaviour;
+			GameObject clickedObject = monoInteractable.gameObject;
+
+			if (taskManager.IsCurrentTask(clickedObject) && !interactable.HasBeenClicked)
+			{
+				interactable.HasBeenClicked = true;
+				// Play the animation
+				Animator animator = clickedObject.GetComponent<Animator>();
+				if (animator != null)
+				{
+					animator.SetTrigger("Complete"); // Ensure the trigger name matches the one used in Animator
+				}
+			}
 		}
 		else
 		{

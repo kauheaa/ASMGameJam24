@@ -153,6 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectType: nonanomaly
+  animator: {fileID: 0}
 --- !u!65 &329441510425256072
 BoxCollider:
   m_ObjectHideFlags: 0

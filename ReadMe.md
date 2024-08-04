@@ -6,7 +6,7 @@ Model inspiration and some textures used
 Couch https://sketchfab.com/3d-models/old-couch-443d9bb95e944afe8ebc4ff489e2886c
 Cat food sound https://freesound.org/people/Ryntjie/sounds/365061/
 Diarrhea sound https://freesound.org/people/endocrytv/sounds/723285/
-COffee sound https://freesound.org/people/dersuperanton/sounds/435559/
+Coffee sound https://freesound.org/people/dersuperanton/sounds/435559/
 Footstep sound https://freesound.org/people/deleted_user_5093904/sounds/268758/
 Computer https://sketchfab.com/3d-models/fallout-terminal-7c04ad7d1b2649b5a4b24fc20b7c714b
 Computer desk https://sketchfab.com/3d-models/office-desk-bf2f5c812068489c92188cde9932ef0d

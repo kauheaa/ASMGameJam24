@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3118622065969431699}
   - component: {fileID: 6227883392157017623}
   - component: {fileID: 2473907410766279590}
+  - component: {fileID: 7141991126669447442}
   m_Layer: 15
   m_Name: WaterPlants
   m_TagString: Untagged
@@ -108,6 +109,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7141991126669447442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 908036098919465004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 324a78463c4b0f3419545c1061ad3d66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 0}
+  audioClip: {fileID: 8300000, guid: d6b17292a992f2c429b9b54bbb7150c5, type: 3}
 --- !u!1 &6352848469523859655
 GameObject:
   m_ObjectHideFlags: 0

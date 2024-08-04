@@ -83,12 +83,16 @@ public class Interactor : MonoBehaviour
 
 			if (taskManager.IsCurrentTask(clickedObject) && !interactable.HasBeenClicked)
 			{
+
 				interactable.HasBeenClicked = true;
 				// Play the animation
+
+				
 				Animator animator = clickedObject.GetComponent<Animator>();
 				if (animator != null)
 				{
 					animator.SetTrigger("Complete"); // Ensure the trigger name matches the one used in Animator
+					Debug.Log("animation not playing??");
 				}
 			}
 		}

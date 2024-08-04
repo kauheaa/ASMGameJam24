@@ -68,7 +68,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.11, y: 2.3388853, z: 2.2891543}
+  m_Size: {x: 0, y: 0, z: 0}
   m_Center: {x: 0, y: 1.6644428, z: 0.1095773}
 --- !u!1 &6847199611381963833
 GameObject:
@@ -87,7 +87,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7785014061623093904
 Transform:
   m_ObjectHideFlags: 0
@@ -204,6 +204,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 678ca3b8555bd2b40af16a29ce8d6666, type: 3}
       propertyPath: m_Name
       value: toilet
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 678ca3b8555bd2b40af16a29ce8d6666, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

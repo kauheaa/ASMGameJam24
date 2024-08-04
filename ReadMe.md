@@ -3,19 +3,19 @@ Credits
 Textures from ambientcg.com
 
 Model inspiration and some textures used
-Couch https://sketchfab.com/3d-models/old-couch-443d9bb95e944afe8ebc4ff489e2886c
-Cat food sound https://freesound.org/people/Ryntjie/sounds/365061/
-Diarrhea sound https://freesound.org/people/endocrytv/sounds/723285/
-Coffee sound https://freesound.org/people/dersuperanton/sounds/435559/
-Footstep sound https://freesound.org/people/deleted_user_5093904/sounds/268758/
-Computer https://sketchfab.com/3d-models/fallout-terminal-7c04ad7d1b2649b5a4b24fc20b7c714b
-Computer desk https://sketchfab.com/3d-models/office-desk-bf2f5c812068489c92188cde9932ef0d
-Shower curtain https://sketchfab.com/3d-models/male-torso-589455d9aa784603868f658de4f5255f
-Nightstand https://sketchfab.com/3d-models/nightstand-415990b9b8d7434099682efbc9993132
-Mirror https://sketchfab.com/3d-models/accent-mirror-damaged-9737c54341a749078e3997469382e68c
-Window https://sketchfab.com/3d-models/wooden-window-352ebe31b9d346869f7e86e840276d44
-Toilet https://sketchfab.com/3d-models/abandoned-toilet-ce1fd38bd6e64da0aa3b4d1164321ad2
-Bed https://sketchfab.com/3d-models/old-bed-210be84bcb5449f5a9f66a923c8ae307
+- Couch https://sketchfab.com/3d-models/old-couch-443d9bb95e944afe8ebc4ff489e2886c
+- Cat food sound https://freesound.org/people/Ryntjie/sounds/365061/
+- Diarrhea sound https://freesound.org/people/endocrytv/sounds/723285/
+- Coffee sound https://freesound.org/people/dersuperanton/sounds/435559/
+- Footstep sound https://freesound.org/people/deleted_user_5093904/sounds/268758/
+- Computer https://sketchfab.com/3d-models/fallout-terminal-7c04ad7d1b2649b5a4b24fc20b7c714b
+- Computer desk https://sketchfab.com/3d-models/office-desk-bf2f5c812068489c92188cde9932ef0d
+- Shower curtain https://sketchfab.com/3d-models/male-torso-589455d9aa784603868f658de4f5255f
+- Nightstand https://sketchfab.com/3d-models/nightstand-415990b9b8d7434099682efbc9993132
+- Mirror https://sketchfab.com/3d-models/accent-mirror-damaged-9737c54341a749078e3997469382e68c
+- Window https://sketchfab.com/3d-models/wooden-window-352ebe31b9d346869f7e86e840276d44
+- Toilet https://sketchfab.com/3d-models/abandoned-toilet-ce1fd38bd6e64da0aa3b4d1164321ad2
+- Bed https://sketchfab.com/3d-models/old-bed-210be84bcb5449f5a9f66a923c8ae307
 
 
 

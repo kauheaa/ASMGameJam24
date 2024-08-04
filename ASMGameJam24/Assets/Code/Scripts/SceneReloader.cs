@@ -15,7 +15,7 @@ public class SceneReloader : MonoBehaviour
             Debug.Log("Current Score: " + ScoreManager.Instance.score);
 
             // Check if the score is 5 or more
-            if (ScoreManager.Instance.score >= 5)
+            if (ScoreManager.Instance.score >= 20)
             {
                 // Move to the "End" scene
                 SceneManager.LoadScene("End");

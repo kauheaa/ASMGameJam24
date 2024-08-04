@@ -6,6 +6,7 @@ public class Interactor : MonoBehaviour
 {
 	[SerializeField] private string type1; // Define the first type
 	[SerializeField] private string type2; // Define the second type
+	[SerializeField] private string type3; // Define the second type
 	[SerializeField] private LayerMask interactableLayer; // Reference to the layer mask
 	[SerializeField] private TaskManager taskManager; // Reference to the TaskManager script
 
@@ -44,6 +45,9 @@ public class Interactor : MonoBehaviour
 							break;
 						case var t when t == type2:
 							HandleType2(interactable);
+							break;
+						case var t when t == type3:
+							HandleType3(interactable);
 							break;
 						default:
 							Debug.Log("Unknown type");
@@ -99,6 +103,37 @@ public class Interactor : MonoBehaviour
 		else
 		{
 			Debug.LogWarning("TaskManager reference is missing.");
+		}
+	}
+
+	private void HandleType3(IInteractable interactable)
+	{
+		// Get the MonoBehaviour of the interactable
+		MonoBehaviour monoInteractable = interactable as MonoBehaviour;
+		if (monoInteractable != null)
+		{
+			// Get the GameObject of the interactable
+			GameObject clickedObject = monoInteractable.gameObject;
+
+			// Get the AudioSource component from the target object
+			AudioSource audioSource = clickedObject.GetComponent<AudioSource>();
+
+			if (audioSource != null)
+			{
+				// Play a specific sound from the AudioSource
+				// Assuming you want to play the first clip, you can adjust as needed
+				// Example: audioSource.clip = yourSpecificAudioClip;
+				audioSource.Play();
+				Debug.Log("Playing sound from AudioSource.");
+			}
+			else
+			{
+				Debug.LogWarning("AudioSource component not found on the target object.");
+			}
+		}
+		else
+		{
+			Debug.LogWarning("Interactable is not a MonoBehaviour.");
 		}
 	}
 }

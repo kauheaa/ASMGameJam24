@@ -2199,6 +2199,9 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 1024
+  stepAudioSource: {fileID: 0}
+  stepSounds: []
+  stepInterval: 0.5
   orientation: {fileID: 914997542}
 --- !u!1001 &898845386
 PrefabInstance:
@@ -2332,8 +2335,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: ESC - Quit
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 100ab9456a9580c4696a2c9dbcc1d46d, type: 2}
+  m_sharedMaterial: {fileID: 6052513202147723834, guid: 100ab9456a9580c4696a2c9dbcc1d46d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3019,8 +3022,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: You're awake now.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 100ab9456a9580c4696a2c9dbcc1d46d, type: 2}
+  m_sharedMaterial: {fileID: 6052513202147723834, guid: 100ab9456a9580c4696a2c9dbcc1d46d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4341,8 +4344,8 @@ MonoBehaviour:
     (Two
     of them)'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 100ab9456a9580c4696a2c9dbcc1d46d, type: 2}
+  m_sharedMaterial: {fileID: 6052513202147723834, guid: 100ab9456a9580c4696a2c9dbcc1d46d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

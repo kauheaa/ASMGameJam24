@@ -14,6 +14,13 @@ public class PlayerMovement : MonoBehaviour
 	public LayerMask whatIsGround;
 	bool grounded;
 
+	public AudioSource stepAudioSource;  // Reference to the AudioSource component
+	public AudioClip[] stepSounds;       // Array to hold different step sounds
+	public float stepInterval = 0.5f;    // Time interval between steps
+
+	private CharacterController characterController;
+	private float stepTimer;
+
 
 	public Transform orientation;
 
@@ -26,6 +33,7 @@ public class PlayerMovement : MonoBehaviour
 
 	private void Start()
 	{
+		stepTimer = stepInterval;
 		rb = GetComponent<Rigidbody>();
 		rb.freezeRotation = true;
 	}
@@ -45,7 +53,38 @@ public class PlayerMovement : MonoBehaviour
 		{
 			rb.drag = 0;
 		}
+
+		if (IsArrowOrWASDKeyPressed())
+		{
+			stepTimer -= Time.deltaTime;
+			if (stepTimer <= 0f)
+			{
+				PlayStepSound();
+				stepTimer = stepInterval;
+			}
+		}
 	}
+
+	bool IsArrowOrWASDKeyPressed()
+	{
+		// Check for arrow keys
+		if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow) ||
+			Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow))
+		{
+			return true;
+		}
+
+		// Check for WASD keys
+		if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) ||
+			Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
+		{
+			return true;
+		}
+
+		return false;
+	}
+
+
 
 	private void FixedUpdate()
 	{
@@ -73,6 +112,17 @@ public class PlayerMovement : MonoBehaviour
 			rb.velocity = new Vector3(0, rb.velocity.y, 0);
 		}
 
+	}
+
+
+	void PlayStepSound()
+	{
+		if (stepSounds.Length > 0)
+		{
+			int index = Random.Range(0, stepSounds.Length);
+			stepAudioSource.clip = stepSounds[index];
+			stepAudioSource.Play();
+		}
 	}
 
 	private void SpeedControl()

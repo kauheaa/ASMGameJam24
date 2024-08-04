@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70afe9e12c7a7ed47911bb608a23a8ff, type: 3}
   m_Name: SplitToning
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   shadows:
     m_OverrideState: 1
     m_Value: {r: 0.23773581, g: 0.17000353, b: 0.17000353, a: 1}
@@ -21,7 +21,7 @@ MonoBehaviour:
     m_Value: {r: 0.58084005, g: 0.8037735, b: 0.79444236, a: 1}
   balance:
     m_OverrideState: 1
-    m_Value: -9.3
+    m_Value: 7
 --- !u!114 &-1872668671116010419
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -37,16 +37,16 @@ MonoBehaviour:
   active: 1
   color:
     m_OverrideState: 1
-    m_Value: {r: 0.05760767, g: 0.18315856, b: 0.3509434, a: 1}
+    m_Value: {r: 0.10866857, g: 0.1514269, b: 0.20754719, a: 1}
   center:
     m_OverrideState: 1
     m_Value: {x: 0.5, y: 0.5}
   intensity:
     m_OverrideState: 1
-    m_Value: 0.338
+    m_Value: 0.373
   smoothness:
     m_OverrideState: 1
-    m_Value: 0.573
+    m_Value: 1
   rounded:
     m_OverrideState: 0
     m_Value: 0
@@ -132,7 +132,7 @@ MonoBehaviour:
   active: 0
   intensity:
     m_OverrideState: 1
-    m_Value: -0.567
+    m_Value: -1
   xMultiplier:
     m_OverrideState: 1
     m_Value: 1
@@ -176,9 +176,9 @@ MonoBehaviour:
   active: 1
   distance:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 0.015
   cropToFit:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 0
 --- !u!114 &7812298370889882159
 MonoBehaviour:

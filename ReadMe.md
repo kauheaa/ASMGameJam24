@@ -17,8 +17,14 @@ Model inspiration and some textures used
 - Toilet https://sketchfab.com/3d-models/abandoned-toilet-ce1fd38bd6e64da0aa3b4d1164321ad2
 - Bed https://sketchfab.com/3d-models/old-bed-210be84bcb5449f5a9f66a923c8ae307
 
+--
 
+Font VCR OSD Mono by Riciery Leal
+https://www.dafont.com/vcr-osd-mono.font
 
+--
+
+Project notes
 
 # File structure, hierarchy and asset naming
 Guidelines for keeping the project organized and easy to manage.

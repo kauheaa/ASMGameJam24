@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: -5580755765614972710}
   - component: {fileID: 2487490877906167757}
   - component: {fileID: -2291242950862878517}
+  - component: {fileID: 3664277441763186329}
   m_Layer: 15
   m_Name: EatSomething
   m_TagString: Untagged
@@ -92,6 +93,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3664277441763186329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 908036098919465004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 324a78463c4b0f3419545c1061ad3d66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 0}
+  audioClip: {fileID: 8300000, guid: 7b68b532d5ac8dc49aea2cdcf01c27ce, type: 3}
 --- !u!1001 &5216586576674346580
 PrefabInstance:
   m_ObjectHideFlags: 0
